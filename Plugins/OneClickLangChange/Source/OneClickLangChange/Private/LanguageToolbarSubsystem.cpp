@@ -34,8 +34,8 @@ void ULanguageToolbarSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 	
 	// 3. [중요] 생성한 커맨드 리스트를 레벨 에디터의 전역 커맨드에 등록합니다.
 	// 이 작업을 해야 에디터 어디서든 Alt + L을 눌렀을 때 단축키가 작동합니다.
-	//FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
-	//LevelEditorModule.GetGlobalLevelEditorActions()->Append(PluginCommands.ToSharedRef());
+	FLevelEditorModule& LevelEditorModule = FModuleManager::LoadModuleChecked<FLevelEditorModule>("LevelEditor");
+	LevelEditorModule.GetGlobalLevelEditorActions()->Append(PluginCommands.ToSharedRef());
 	
 	// 3. [수정] 에디터 전체(MainFrame)를 관장하는 커맨드에 등록
 	// 이렇게 하면 블루프린트, 머티리얼 에디터 등 모든 창에서 단축키가 작동합니다.
