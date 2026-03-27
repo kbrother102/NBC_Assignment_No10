@@ -50,6 +50,7 @@ protected:
 	UInputAction* MouseLookAction;
 
 public:
+	virtual void BeginPlay() override;
 
 	/** Constructor */
 	AModuleAndPluginCharacter();	

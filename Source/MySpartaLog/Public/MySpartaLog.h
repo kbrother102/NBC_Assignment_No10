@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Modules/ModuleManager.h"
-
+MYSPARTALOG_API DECLARE_LOG_CATEGORY_EXTERN(LogMySpartaModule, Log, All);
 class FMySpartaLogModule : public IModuleInterface
 {
 public:

@@ -9,17 +9,15 @@ public class MySpartaLog : ModuleRules
         PublicDependencyModuleNames.AddRange(
             new string[]
             {
-                "Core",
+                // Initial Modules
+                "Core", "CoreUObject", "Engine", "InputCore"
             }
         );
 
         PrivateDependencyModuleNames.AddRange(
             new string[]
             {
-                "CoreUObject",
-                "Engine",
-                "Slate",
-                "SlateCore"
+
             }
         );
     }

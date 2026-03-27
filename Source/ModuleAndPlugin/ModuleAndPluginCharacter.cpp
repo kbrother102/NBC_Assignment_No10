@@ -11,6 +11,13 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "ModuleAndPlugin.h"
+#include "TestActor.h"
+
+void AModuleAndPluginCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	GetWorld()->SpawnActor(ATestActor::StaticClass());
+}
 
 AModuleAndPluginCharacter::AModuleAndPluginCharacter()
 {
